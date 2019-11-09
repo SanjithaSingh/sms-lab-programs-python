@@ -12,5 +12,5 @@
 5. Write a program to show goodness of fit test using **Autocorrelation test** for the input set of random numbers. Assume Zα/2=1.96
 
 ## Contributors
-- [Sanjitha Singh](github.com/SanjithaSingh)
-- [Mohammed Ataaur Rahaman](github.com/Ataago)
+- [Sanjitha Singh](https://github.com/SanjithaSingh)
+- [Mohammed Ataaur Rahaman](https://github.com/Ataago)
