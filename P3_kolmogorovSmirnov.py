@@ -5,7 +5,9 @@
 #   Created by Mohammed Ataa on 9/11/19.
 #   Copyright © 2019 Ataago. All rights reserved.
 #   
-#   Write a program to show goodness of fit test using Kolmogorov Smirnov Test for the given population of random numbers
+#   Write a program to show goodness of fit test using Kolmogorov Smirnov Test 
+#   for the given population of random numbers. Assume significance value is equal to 0.05. 
+#   Dcritical = 0.565
 #
 
 # Enter the Random Numbers and store it in sorted format
