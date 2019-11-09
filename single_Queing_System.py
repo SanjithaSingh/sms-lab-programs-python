@@ -1,3 +1,11 @@
+# 
+#   single_Queing_System.py
+#   Single Server Queue Simulation
+#
+#   Created by Mohammed Ataa on 2/11/19.
+#   Copyright © 2019 Ataago. All rights reserved.
+#   
+
 import numpy as np
 
 
