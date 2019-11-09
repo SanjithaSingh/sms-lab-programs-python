@@ -1,3 +1,14 @@
+# 
+#   P5_autoCorrelationTest.py
+#   Auto Correlation Test
+#
+#   Created by Sanjitha Singh on 2/11/19.
+#   Copyright © 2019 SanjithaSingh. All rights reserved.
+# 
+#   Write a program to show goodness of fit test using Autocorrelation test for the input set of random numbers. 
+#   Assume Zα/2=1.96
+#
+
 from math import floor, sqrt
 from random import random
 
@@ -9,8 +20,7 @@ def input_random_numbers():
 
 
 def generate_random_numbers(n): #optional
-    random_numbers = [round(random(), 4) for i in
-                      range(n)]  # n random numbers generated between 0 to 1 rounded to 4 digits
+    random_numbers = [round(random(), 4) for i in range(n)]  # n random numbers generated between 0 to 1 rounded to 4 digits
     print("Generated Random numbers:", random_numbers)
     return random_numbers
 

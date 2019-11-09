@@ -5,7 +5,8 @@
 #   Created by Mohammed Ataa on 9/11/19.
 #   Copyright © 2019 Ataago. All rights reserved.
 #   
-#   Write a program to simulate a multi-channel queueing system for the dump truck problem.
+#   Write a program to simulate the multi-channel dump truck system consisting of 6 trucks, 2 loaders and 1 scale. 
+#   Consider the standard initial assumptions. Calculate the server utilizations for a simulation period of 72 minutes
 #
 
 from random import randint

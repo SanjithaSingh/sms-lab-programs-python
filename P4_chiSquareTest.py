@@ -1,5 +1,16 @@
-from random import random
+# 
+#   P4_chiSquareTest.py
+#   Chi Square Test
+#
+#   Created by Sanjitha Singh on 2/11/19.
+#   Copyright © 2019 SanjithaSingh. All rights reserved.
+# 
+#   Write a program to show goodness of fit test using Chi-Square Test 
+#   for the input set of random numbers. Assume significance value is equal to 0.05. 
+#   Dcritical = 16.9
+#
 
+from random import random
 
 def input_random_numbers():
     random_numbers = input("Enter the random numbers: ")
