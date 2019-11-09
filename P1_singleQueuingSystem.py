@@ -5,8 +5,6 @@
 #   Created by Mohammed Ataa on 2/11/19.
 #   Copyright © 2019 Ataago. All rights reserved.
 #   
-#   Write a program to simulate the average waiting time of the customer in the single server queueing system.
-#
 
 from random import random
 
