@@ -1,5 +1,5 @@
 # 
-#   dumpTruckSimulation.py
+#   P2_dumpTruckSimulation.py
 #   Dump Truck Problem simulation
 #
 #   Created by Mohammed Ataa on 9/11/19.
@@ -58,7 +58,13 @@ class FutureEventList:
 
 
 class simulationState:
-    """ Gives data about the state of the stateulation """
+    """ Stores data for the various Parameters of the Simulation in its States
+            lq: Loader Queue list
+            l : Number of Trucks in 2 loading servers 
+            wq: Weighing Queue list
+            w : Number of Trucks in 1 Weighing Server
+            fel: Future Event List
+    """
     def __init__(self, lq, l, wq, w, fel):
         self.clk = 0        # Clock time of the Simulation State
         self.lq = lq        # list of Dump trucks in Loading Queue
@@ -88,7 +94,7 @@ def simulate(state):
     # Event When Loading Ends at the server
     if curEvent.name == 'EL':
         state.l -= 1
-        if state.w == 0:     # Weiging server and weighing Queue is free
+        if state.w == 0:     # Weighing server and weighing Queue is free
             state.w = 1
             state.fel.addEvent(Event('EW', workTIme(state.clk, 10, 30), curEvent.truck))
         else:
@@ -138,9 +144,9 @@ if __name__ == '__main__':
     fel.addEvent(Event('EW', 12, 1))    # DT1
     fel.addEvent(Event('EL', 10, 2))    # DT2
     fel.addEvent(Event('EL', 5, 3))     # DT3
-    lq.append(4)                     # DT4
-    lq.append(5)                     # DT5
-    lq.append(6)                     # DT6
+    lq.append(4)                        # DT4
+    lq.append(5)                        # DT5
+    lq.append(6)                        # DT6
 
     # Dump trucks state at CLK = 0
     state = simulationState(lq, 2, wq, 1, fel)

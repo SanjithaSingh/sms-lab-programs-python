@@ -1,5 +1,5 @@
 # 
-#   single_Queing_System.py
+#   P1_singleQueuingSystem.py
 #   Single Server Queue Simulation
 #
 #   Created by Mohammed Ataa on 2/11/19.
@@ -133,6 +133,7 @@ for i in range(n):
 
 def count_non_zeros(myList):
     return len(list(filter(lambda x: x != 0, myList)))
+
 # Calculating the Metrics
 wCount = count_non_zeros(WT)    # Number of Customers who Waited
 iCount = count_non_zeros(IT)    # Number of Times the Server went to Idle States
