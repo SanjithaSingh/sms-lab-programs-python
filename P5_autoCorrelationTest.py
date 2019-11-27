@@ -12,22 +12,22 @@
 from math import floor, sqrt
 from random import random
 
-
+# input_random_numbers() inputs numbers from the user. Used for testing purposes.
 def input_random_numbers():
     random_numbers = input("Enter the random numbers: ")
     random_numbers = [float(i) for i in random_numbers.split()]
     return random_numbers
 
-
-def generate_random_numbers(n): #optional
+# generate_random_numbers() generates n random numbers, where n is the number of random numbers to generate
+def generate_random_numbers(n):
     random_numbers = [round(random(), 4) for i in
                       range(n)]  # n random numbers generated between 0 to 1 rounded to 4 digits
     print("Generated Random numbers:", random_numbers)
     return random_numbers
 
 
-R = input_random_numbers()
-# random_numbers=generate_random_numbers(30)
+R=generate_random_numbers(30)
+#R = input_random_numbers() ##uncomment this line if you want to use your own inputs
 
 i = int(input("Enter the start point(i): "))
 m = int(input("Enter the gap(m): "))

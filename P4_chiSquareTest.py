@@ -12,13 +12,13 @@
 
 from random import random
 
-
+# input_random_numbers() inputs numbers from the user. Used only for testing purposes.
 def input_random_numbers():
     random_numbers = input("Enter the random numbers: ")
     random_numbers = [float(i) for i in random_numbers.split()]
     return random_numbers
 
-
+# generate_random_numbers() generates n random numbers, where n is the number of random numbers to generate
 def generate_random_numbers(n): #optional
     random_numbers = [round(random(), 4) for i in
                       range(n)]  # n random numbers generated between 0 to 1 rounded to 4 digits
@@ -26,8 +26,9 @@ def generate_random_numbers(n): #optional
     return random_numbers
 
 
-random_numbers = input_random_numbers()
-# random_numbers=generate_random_numbers(20)
+
+random_numbers=generate_random_numbers(20)
+#random_numbers = input_random_numbers() ### uncomment this line if you want to give your own inputs
 n = int(input("Enter the number of class intervals: "))
 
 # generating upper-bound of ranges
