@@ -20,8 +20,7 @@ def input_random_numbers():
 
 
 def generate_random_numbers(n): #optional
-    random_numbers = [round(random(), 4) for i in
-                      range(n)]  # n random numbers generated between 0 to 1 rounded to 4 digits
+    random_numbers = [round(random(), 4) for i in range(n)]  # n random numbers generated between 0 to 1 rounded to 4 digits
     print("Generated Random numbers:", random_numbers)
     return random_numbers
 

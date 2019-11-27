@@ -13,18 +13,18 @@ from random import random
 # Number of Customers
 n = int(input("\nEnter Number of Customers to Simulate Single Server Queue: "))
 
-IATRange = [1, 2, 3, 4, 5, 6, 7, 8]  # InterArrival time distributed from 1 to 8 mins
+IATValues = [1, 2, 3, 4, 5, 6, 7, 8]  # InterArrival time distributed from 1 to 8 mins
 probIAT = [1/8] * 8  # Equal Probalitiy for each Arival time
 RD_IAT = [round(random()*100) for i in range(n)]
 
-STRange = [1, 2, 3, 4, 5, 6]    # Service Time Distributed across 1 to 6 mins
+STValues = [1, 2, 3, 4, 5, 6]    # Service Time Distributed across 1 to 6 mins
 probST = [0.10, 0.20, 0.30, 0.25, 0.10, 0.05]
 RD_ST = [round(random()*100) for i in range(n)]
 
 
 #   To find IAT from Given Random Digits
 
-    # IATRange        probIAT RDRangeIAT
+    # IATValues        probIAT RDRangeIAT
     # -----------------------------------------
     # 1        0.125   12.5
     # 2        0.125   25.0
@@ -37,29 +37,29 @@ RD_ST = [round(random()*100) for i in range(n)]
 
 # Finding The Random Digit Ranges for Arival Time
 RDRangeIAT = []
-for i in range(len(IATRange)):
+for i in range(len(IATValues)):
     RDRangeIAT.append(sum(probIAT[0:i + 1]) * 100)
 
 # Finding Inter Arival Time and Cumulative time for Each Customer
 IAT, AT = [0, ], []
 
 for i in range(n):
-    for j in range(len(IATRange)):
+    for j in range(len(IATValues)):
         if RD_IAT[i] <= RDRangeIAT[j]:
-            IAT.append(IATRange[j])
+            IAT.append(IATValues[j])
             break
     AT.append(sum(IAT[0:i + 1]))
 
 #   Printing RD Range Table
-print('\nIATRange\tprobIAT\tRDRangeIAT\n-----------------------------------------')
-for i in range(len(IATRange)):
-    print(IATRange[i], '\t\t', probIAT[i], '\t', RDRangeIAT[i])
+print('\nIATValues\tprobIAT\tRDRangeIAT\n-----------------------------------------')
+for i in range(len(IATValues)):
+    print(IATValues[i], '\t\t', probIAT[i], '\t', RDRangeIAT[i])
 print('\nGiven RD: ', RD_IAT)
 print('IAT:       ', IAT)
 
 #   To find ST from Given Random Digits
 
-        # STRange probST  RDRangeST
+        # STValues probST  RDRangeST
         # -----------------------------------------
         # 1        0.1     10.0
         # 2        0.2     30.000000000000004
@@ -70,21 +70,21 @@ print('IAT:       ', IAT)
 
 # Finding RD Range for Service Time
 RDRangeST = []
-for i in range(len(STRange)):
+for i in range(len(STValues)):
     RDRangeST.append(sum(probST[0: i + 1]) * 100)
 
 # Finding the Service Time for each Customer
 ST = []
 for i in range(n):
-    for j in range(len(STRange)):
+    for j in range(len(STValues)):
         if RD_ST[i] <= RDRangeST[j]:
-            ST.append(STRange[j])
+            ST.append(STValues[j])
             break
 
 #   Printing RD Range Table
-print('\n\nSTRange\tprobST\tRDRangeST\n-----------------------------------------')
-for i in range(len(STRange)):
-    print(STRange[i], '\t', probST[i], '\t', RDRangeST[i])
+print('\n\nSTValues\tprobST\tRDRangeST\n-----------------------------------------')
+for i in range(len(STValues)):
+    print(STValues[i], '\t', probST[i], '\t', RDRangeST[i])
 print('\nGiven RD: ', RD_ST)
 print('ST:       ', ST)
 
