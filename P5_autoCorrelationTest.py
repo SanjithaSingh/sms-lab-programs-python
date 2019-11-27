@@ -39,11 +39,11 @@ M = floor(((N - i) / m) - 1)
 # calculate rho
 rho = 0
 for k in range(M + 1):
-    rho += R[i + k * m] + R[i + (k + 1) * m]
+    rho += (R[i + k * m - 1] * R[i + (k + 1) * m - 1])
 rho = (rho / (M + 1)) - 0.25
 
 # calculate sigma
-sigma = sqrt(13 * M + 7) / 12 * (M + 1)
+sigma = sqrt(13 * M + 7) / (12 * (M + 1))
 
 # calculate Z0
 Z0 = rho / sigma
