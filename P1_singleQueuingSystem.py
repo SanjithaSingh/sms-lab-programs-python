@@ -129,9 +129,10 @@ for i in range(n):   # Iterating over each customer 1, 2, 3, .. n
     IT.append(0)
 
 # Printing The Table
-print("\nIAT\tAT\tST\tTSB\tTSE\tWT\tIT\n-----------------------------------------------------")
+print("\nC#\tIAT\tAT\tST\tTSB\tTSE\tWT\tIT\n-----------------------------------------------------")
 for i in range(n):
-    print(IAT[i], '\t', AT[i], '\t', ST[i], '\t', TSB[i], '\t', TSE[i], '\t', WT[i], '\t', IT[i])
+    print("{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}".format((i+1),IAT[i],AT[i],ST[i],TSB[i],TSE[i],WT[i], IT[i]))
+
 
 def count_non_zeros(myList):
     return len(list(filter(lambda x: x != 0, myList)))
